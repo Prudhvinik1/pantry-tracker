@@ -33,4 +33,4 @@ if (typeof window !== 'undefined') {
   });
 }
 
-export { db, app, analytics };
+export { app, analytics };
