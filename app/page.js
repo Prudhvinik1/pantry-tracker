@@ -4,7 +4,7 @@ import { collection, addDoc, getDoc, querySnapshot, query, onSnapshot, deleteDoc
 import { db } from './firebase';
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
-import { db, firebaseConfig } from './firebase';
+import { firebaseConfig } from './firebase';
 
 // Initialize Firebase app
 const app = initializeApp(firebaseConfig);
