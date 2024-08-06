@@ -2,27 +2,6 @@
 import React, { useState, useEffect }  from 'react';
 import { collection, addDoc, getDoc, querySnapshot, query, onSnapshot, deleteDoc, doc } from "firebase/firestore"; 
 import { db } from './firebase';
-import { initializeApp } from "firebase/app";
-import { getAnalytics, isSupported } from "firebase/analytics";
-import { firebaseConfig } from './firebase';
-
-// Initialize Firebase app
-const app = initializeApp(firebaseConfig);
-
-// Initialize Analytics if supported
-let analytics;
-if (typeof window !== 'undefined') {
-  isSupported().then((supported) => {
-    if (supported) {
-      analytics = getAnalytics(app);
-      // You can add any analytics setup code here
-    }
-  }).catch((error) => {
-    console.error("Firebase Analytics is not supported in this environment:", error);
-  });
-}
-
-
 
 export default function Home() {
   const [items, setItems] = useState([]);
